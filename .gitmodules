@@ -1,0 +1,12 @@
+[submodule "src/LinuxCHAL"]
+	path = src/LinuxCHAL
+	url = git@github.com:william-redenbaugh/LinuxCHAL.git
+[submodule "src/LinuxCSAL"]
+	path = src/LinuxCSAL
+	url = git@github.com:william-redenbaugh/LinuxCSAL.git
+[submodule "src/CSAL_SHARED"]
+	path = src/CSAL_SHARED
+	url = git@github.com:william-redenbaugh/CSAL_SHARED.git
+[submodule "src/CHAL_SHARED"]
+	path = src/CHAL_SHARED
+	url = git@github.com:william-redenbaugh/CHAL_SHARED.git
