@@ -8,6 +8,7 @@
 #include "enabled_modules.h"
 #include "event_type_list.h"
 #include "threads_list.h"
+#include "project_conf.h"
 
 #include "../src/LinuxCHAL/linux_chal_shared_includes.h"
 #include "../src/LinuxCSAL/linux_csal_shared_includes.h"
