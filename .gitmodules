@@ -10,3 +10,6 @@
 [submodule "src/CHAL_SHARED"]
 	path = src/CHAL_SHARED
 	url = git@github.com:william-redenbaugh/CHAL_SHARED.git
+[submodule "src/CHALRaspi"]
+	path = src/CHALRaspi
+	url = git@github.com:william-redenbaugh/CHALRaspi.git
