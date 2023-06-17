@@ -1,6 +1,11 @@
 #include "stdio.h"
 #include "global_includes.h"
+#include "pthread.h"
+#include "unistd.h"
 
 int main(void){
-    return 0;
+    threads_list_init();
+    for(;;){
+        sleep(320);
+    }
 }
