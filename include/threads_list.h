@@ -2,7 +2,7 @@
 #define _THREADS_LIST_H
 
 #include "matrix_thread.h"
-#include "../src/CSAL_SHARED/event_management.hpp"
+#include "../src/CSAL_SHARED/event_management.h"
 #include "../src/CHAL_SHARED/csal_ipc_thread.h"
 
 #define INIT_THREAD_LIST                                                                                                \
