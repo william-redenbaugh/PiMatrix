@@ -3,7 +3,7 @@
 #include "pthread.h"
 #include "unistd.h"
 
-int main(void){
+extern "C" int main(void){
     threads_list_init();
     for(;;){
         sleep(320);

@@ -1,6 +1,5 @@
 #include "matrix_thread.h"
 #include "global_includes.h"
-static os_mut_t matrix_mutx; 
 
 #ifdef LED_MATRIX_DEBUGGING
 #define led_matrix_println(e) println(e)
@@ -8,10 +7,10 @@ static os_mut_t matrix_mutx;
 #define led_matrix_println(e) void(e)
 #endif
 
+static os_ledmatrix_t matrix;
+static os_mut_t matrix_mutx; 
 static int led_matrix_frame_length; 
-
-uint8_t frame_data[12288];
-
+static uint8_t frame_data[12288];
 static local_eventqueue_t matrix_queue;
 
 void new_matrix_frame_msg(ipc_sub_ret_cb_t ret){
@@ -42,6 +41,16 @@ void matrix_thread(void *params){
 }
 
 void matrix_thread_init(void *params){
+
+    os_ledmatrix_init_t init_params;
+
+    init_params.width = 128; 
+    init_params.height = 32; 
+    init_params.matrix_ptr = NULL;
+    init_params.init_func = hub75_led_matrix_init;
+    init_params.setpixel_func = hub75_led_matrix_set_pixel;
+    init_params.update_func = hub75_led_matrix_update;
+
     os_mut_init(&matrix_mutx);
     // Setup matrix thread
     ipc_attach_cb(IPC_TYPE_LED_ANIMATION_TYPE, new_matrix_frame_msg);

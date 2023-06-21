@@ -5,7 +5,7 @@
 #include "../src/CSAL_SHARED/csal_shared_includes.h"
 #include "../src/LinuxCHAL/linux_chal_shared_includes.h"
 #include "../src/CHAL_SHARED/chal_shared_includes.h"
-
+#include "../src/CHALRaspi/chal_rasp_shared_includes.h"
 
 #include "ipc_enum.h"
 #include "enabled_modules.h"

@@ -2,11 +2,13 @@ cmake_minimum_required(VERSION 3.17)
 PROJECT(PiMatrix)
 
 file(GLOB_RECURSE SRCS src/*.cpp)
+file(GLOB_RECURSE SRCS src/*.cc)
 file(GLOB_RECURSE HDRS src/*.h)
+file(GLOB_RECURSE SRCS src/*.c)
 
 file(GLOB_RECURSE INCL_HDRS include/*.h)
 
-ADD_EXECUTABLE(PiMatrix  
+ADD_EXECUTABLE(PiMatrix
     ${INCL_HDRS} ${SRCS_HAL} ${HDRS_HAL}
     ${SRCS} ${HDRS})
 
